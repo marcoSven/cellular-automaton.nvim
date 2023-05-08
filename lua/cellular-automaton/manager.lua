@@ -74,6 +74,7 @@ end
 M.clean = function()
   animation_in_progress = false
   ui.clean()
+  vim.api.nvim_exec_autocmds("User", {pattern = "PostCellularAutomaton"})
 end
 
 return M
